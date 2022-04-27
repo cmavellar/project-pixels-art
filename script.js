@@ -15,26 +15,30 @@ for (let index = 0; index < pixels.length; index +=1) {
 }
 let currentColorSelected = document.getElementsByClassName("selected")[0];
 
+let button = document.getElementById("clear-board");
+button.addEventListener("click", clearPixels)
+
 function changeSelectedColor(event) {
 
     currentColorSelected.classList.remove("selected"); 
     currentColorSelected = event.target;
     currentColorSelected.classList.add("selected");  
     
-}
-
+} 
 
 function changeColor (event) {
 
   const cssObj = window.getComputedStyle(currentColorSelected, null);
   let backgroundColor = cssObj.getPropertyValue("background-color");
-  console.log(backgroundColor);
+  // console.log(backgroundColor);
 
   event.target.style.backgroundColor = backgroundColor;   
+} 
+
+function clearPixels() {
+
+for (let index = 0; index < pixels.length; index+=1) {
+  pixels[index].style.backgroundColor = "white"; 
 }
 
-
-
-
-
-
+}
