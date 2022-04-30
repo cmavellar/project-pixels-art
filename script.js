@@ -9,22 +9,22 @@ function generateColor() { // Referência retirada do site, até linha 17, de 'H
   for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
-    return color;
-  }
+  return color;
+}
 
 cor2.style.backgroundColor = generateColor();
 cor3.style.backgroundColor = generateColor();
 cor4.style.backgroundColor = generateColor();
- 
+
 const divList = document.getElementById('pixel-board'); //div que dará origem a outras ul/li
 
-let inputBoardSize = document.getElementById('board-size'); // input de criacao de mais pixels
+const inputBoardSize = document.getElementById('board-size'); // input de criacao de mais pixels
 
 const buttonVQV = document.getElementById('generate-board'); // botao
-buttonVQV.addEventListener("click", createInputPixelSquare)
+buttonVQV.addEventListener("click", createInputPixelSquare);
 
 let N = 5;
-// createPixelSquare(); 
+// createPixelSquare();
 
 // input do usuario para criar um quadrado de pixels personalizado
 function createInputPixelSquare() { 
@@ -32,16 +32,15 @@ function createInputPixelSquare() {
 
   if (inputValue == 0) {
     alert('Board inválido!');
- }
-  else { 
-      N = inputValue; 
+  } else { 
+    N = inputValue;
   if (inputValue < 5) {
-      N = 5;
+    N = 5;
   }
     if (inputValue > 50) {
       N = 50;
   }
-    divList.innerHTML = "";
+    divList.innerHTML = '';
     createPixelSquare ();
   }
 }
@@ -77,19 +76,19 @@ button.addEventListener('click', clearPixels);
 
 // muda a cor selecionada e alterna a classe selected
 function changeSelectedColor(event) {
-  currentColorSelected.classList.remove("selected");
+  currentColorSelected.classList.remove('selected');
   currentColorSelected = event.target;
-  currentColorSelected.classList.add("selected");
+  currentColorSelected.classList.add('selected');
 }  
 // preenche os pixels de acordo com a cor da paleta selecionada
 function changeColor(event) { 
   const cssObj = window.getComputedStyle(currentColorSelected, null); // Referência retirada, até linha 18, do site W3 Schools <https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp> 
-  const backgroundColor = cssObj.getPropertyValue("background-color");  
+  const backgroundColor = cssObj.getPropertyValue('background-color'); 
   event.target.style.backgroundColor = backgroundColor;   
-} 
+}
 // limpa os pixels
 function clearPixels() {
 for (let index = 0; index < pixels.length; index+=1) {
-  pixels[index].style.backgroundColor = "white";
+  pixels[index].style.backgroundColor = 'white';
+  }
 } 
-}

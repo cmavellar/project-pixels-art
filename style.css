@@ -1,19 +1,22 @@
 body {
   background-color: white;
-} 
+}
+
 .color {
   border: 1px solid black;
-  display:inline-block;
+  display: inline-block;
   height: 70px;
   width: 70px;
   margin-bottom: 40px;
 }
+
 #black {
   background-color: black;
-} 
+}
+
 .pixel {     
   background-color: white;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid black;
   display:inline-block;
   height: 40px;
   width: 40px;
