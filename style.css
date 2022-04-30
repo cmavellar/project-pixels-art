@@ -12,18 +12,19 @@ body {
     width: 70px;
     margin-bottom: 40px;
     }
-#black {
+ #black {
     background-color: rgb(0, 0, 0);
-}
-#red {
+} 
+/* #cor2 {
     background-color: rgb(233, 10, 10);     
-}
-#blue {
+} 
+#cor3 {
     background-color: rgb(10, 10, 240);
 }
-#green {
-    background-color: rgb(5, 158, 5);
-}
+#cor4 {
+    background-color: rgb(5, 158, 5); 
+}  */
+
 /* #pixel-board {
     
 } */
